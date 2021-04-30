@@ -6,7 +6,7 @@ from pathlib import Path
 from gensim import utils
 from tensorflow.keras.callbacks import EarlyStopping
 from keras.optimizers import SGD, Adam
-from eda import  *
+from eda import *
 
 from sklearn.model_selection import train_test_split
 from nltk.corpus import stopwords
@@ -137,6 +137,20 @@ def eval_metric(history, metric_name):
 
 df = pd.read_csv('Tweets.csv')
 df = df.reindex(np.random.permutation(df.index))
+num_of_negs = 0
+length = len(df)
+print(length)
+i = 0
+while i < length:
+    try:
+        if df['airline_sentiment'][i] == 'negative':
+            if num_of_negs > 3000:
+                df.drop(index=df[df['tweet_id'] == df['tweet_id'][i]].index, inplace=True)
+            num_of_negs = num_of_negs + 1
+        i = i + 1
+    except:
+        i = i + 1
+print(len(df))
 df = df[['text', 'airline_sentiment']]
 df.text = df.text.apply(remove_stopwords).apply(remove_mentions)
 # num_aug = 4
@@ -164,28 +178,28 @@ df.text = df.text.apply(remove_stopwords).apply(remove_mentions)
 
 X_train, X_test, y_train, y_test = train_test_split(df.text, df.airline_sentiment, test_size=0.1, random_state=37)
 # EDA **********************************************************
-print(len(X_train), len(y_train))
-num_aug = 4
-alpha = 0.1
-length = len(X_train)
-i = 0
-j = 0
-for x, y in zip(X_train, y_train):
-    i = i + 1
-    try:
-        line = eda(x, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha, num_aug=num_aug)
-        while j < len(line):
-            # dataframe = pd.DataFrame([line[j], df['airline_sentiment'][i]], columns=list('test airline_sentiment'))
-            series1 = pd.Series(line[j], index=[length + i])
-            series2 = pd.Series(y, index=[length + i])
-            X_train = X_train.append(series1)
-            y_train = y_train.append(series2)
-            j = j+1
-        j = 0
-    except:
-        print('err')
-        continue
-print(len(X_train), len(y_train))
+# print(len(X_train), len(y_train))
+# num_aug = 4
+# alpha = 0.1
+# length = len(X_train)
+# i = 0
+# j = 0
+# for x, y in zip(X_train, y_train):
+#     i = i + 1
+#     try:
+#         line = eda(x, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha, num_aug=num_aug)
+#         while j < len(line):
+#             # dataframe = pd.DataFrame([line[j], df['airline_sentiment'][i]], columns=list('test airline_sentiment'))
+#             series1 = pd.Series(line[j], index=[length + i])
+#             series2 = pd.Series(y, index=[length + i])
+#             X_train = X_train.append(series1)
+#             y_train = y_train.append(series2)
+#             j = j+1
+#         j = 0
+#     except:
+#         print('err')
+#         continue
+# print(len(X_train), len(y_train))
 
 tk = Tokenizer(num_words=NB_WORDS,
                filters='!"#$%&()*+,-./:;<=>?@[\]^_`{"}~\t\n',
@@ -209,26 +223,26 @@ X_train_emb, X_valid_emb, y_train_emb, y_valid_emb = train_test_split(X_train_se
                                                                       random_state=37)
 
 emb_model = models.Sequential()
-# emb_model.add(layers.Embedding(NB_WORDS, 8, input_length=MAX_LEN))
+# emb_model.add(layers.Embedding(NB_WORDS, GLOVE_DIM, input_length=MAX_LEN))
 # emb_model.add(layers.Flatten())
-# emb_model.add(layers.Dense(3, activation='softmax'))
-
-# emb_model.add(layers.Embedding(NB_WORDS, 50, input_length=MAX_LEN))
-# emb_model.add(layers.Conv1DTranspose(64, 1, activation='sigmoid'))
-# emb_model.add(layers.MaxPooling1D(1, padding='same')) # ili 2
-# emb_model.add(layers.LSTM(64))
-# emb_model.add(layers.Dense(64, activation='relu'))
 # emb_model.add(layers.Dense(3, activation='softmax'))
 
 emb_model.add(layers.Embedding(NB_WORDS, 50, input_length=MAX_LEN))
-emb_model.add(layers.Conv1DTranspose(filters=64, kernel_size=1, padding='same', activation='sigmoid'))
-emb_model.add(layers.MaxPooling1D(pool_size=2))
-emb_model.add(layers.LSTM(80))
-# emb_model.add(layers.Bidirectional(layers.LSTM(64)))
-# emb_model.add(layers.Flatten())
-emb_model.add(layers.Dense(18, activation='relu'))
-emb_model.add(layers.Dropout(0.5))
+emb_model.add(layers.Conv1DTranspose(64, 1, activation='sigmoid'))
+emb_model.add(layers.MaxPooling1D(1, padding='same')) # ili 2
+emb_model.add(layers.LSTM(64))
+emb_model.add(layers.Dense(64, activation='relu'))
 emb_model.add(layers.Dense(3, activation='softmax'))
+
+# emb_model.add(layers.Embedding(NB_WORDS, 50, input_length=MAX_LEN))
+# emb_model.add(layers.Conv1DTranspose(filters=64, kernel_size=1, padding='same', activation='sigmoid'))
+# emb_model.add(layers.MaxPooling1D(pool_size=2))
+# emb_model.add(layers.LSTM(80))
+# # emb_model.add(layers.Bidirectional(layers.LSTM(64)))
+# # emb_model.add(layers.Flatten())
+# emb_model.add(layers.Dense(18, activation='relu'))
+# emb_model.add(layers.Dropout(0.5))
+# emb_model.add(layers.Dense(3, activation='softmax'))
 
 # emb_model.add(layers.Embedding(NB_WORDS, GLOVE_DIM, input_length=MAX_LEN))
 # emb_model.add(layers.Conv1D(64, 3, activation='relu'))
@@ -239,12 +253,12 @@ emb_model.add(layers.Dense(3, activation='softmax'))
 # emb_model.add(layers.Dense(3, activation='softmax'))
 
 emb_model.summary()
-emb_model.save('emb_model')
+# emb_model.save('emb_model')
 emb_history = deep_model(emb_model, X_train_emb, y_train_emb, X_valid_emb, y_valid_emb)
 emb_results = test_model(emb_model, X_train_seq_trunc, y_train_oh, X_test_seq_trunc, y_test_oh, 10)
 print('\n')
 print('Test accuracy of word embeddings model: {0:.2f}%'.format(emb_results[1] * 100))
-
+emb_model.save('emb_model')
 var = emb_history.history['accuracy'][-1]
 print(var)
 
