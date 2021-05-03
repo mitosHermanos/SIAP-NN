@@ -12,23 +12,27 @@ tk = Tokenizer(num_words=NB_WORDS,
                lower=True,
                split=" ")
 
-country_hall = open("../hotels-parsed-added-facilities/country_hall(parsed)(1)_facilities.csv", "r")
-leeds = open("../hotels-parsed-added-facilities/leeds(parsed)(1)_facilities.csv", "r")
-park_royal = open("../hotels-parsed-added-facilities/park_royal(parsed1)_facilities.csv", "r")
-riverbank = open("../hotels-parsed-added-facilities/riverbank(parsed1)_facilities.csv", "r")
-victoria_london = open("../hotels-parsed-added-facilities/victoria_london(parsed)_facilities.csv", "r")
-victoria = open("../hotels-parsed-added-facilities/victoria(parsed)(1)_facilities.csv", "r")
-vondelpark = open("../hotels-parsed-added-facilities/vondelpark(parsed)(1)_facilities.csv", "r")
-westminster = open("../hotels-parsed-added-facilities/westminster(parsed1)_facilities.csv", "r")
-wroclaw = open("../hotels-parsed-added-facilities/wrocław(parsed1)_facilities.csv", "r")
-dubai = open("../hotels-parsed-added-facilities/Radisson_Blu_Dubai_facilities.csv", "r")
-edinburgh = open("../hotels-parsed-added-facilities/Radisson_Blu_ Edinburgh_facilities.csv", "r")
-edwardian = open("../hotels-parsed-added-facilities/Radisson_Blu_Edwardian_facilities.csv", "r")
-edwardian_london = open("../hotels-parsed-added-facilities/Radisson_Blu_Edwardian_London_facilities.csv", "r")
-glasgow = open("../hotels-parsed-added-facilities/Radisson_Blu_Glasgow_facilities.csv", "r")
-liverpool = open("../hotels-parsed-added-facilities/Radisson_Blu_Liverpool_facilities.csv", "r")
-manchester = open("../hotels-parsed-added-facilities/Radisson_Blu_Manchester_facilities.csv", "r")
-sydney = open("../hotels-parsed-added-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities.csv", "r")
+country_hall = open("../hotels-with-categorized-facilities/country_hall(parsed)("
+                    "1)_facilities_categorized_facilities.csv", "r")
+leeds = open("../hotels-with-categorized-facilities/leeds(parsed)(1)_facilities_categorized_facilities.csv", "r")
+park_royal = open("../hotels-with-categorized-facilities/park_royal(parsed1)_facilities_categorized_facilities.csv", "r")
+riverbank = open("../hotels-with-categorized-facilities/riverbank(parsed1)_facilities_categorized_facilities.csv", "r")
+victoria_london = open("../hotels-with-categorized-facilities/victoria_london("
+                       "parsed)_facilities_categorized_facilities.csv", "r")
+victoria = open("../hotels-with-categorized-facilities/victoria(parsed)(1)_facilities_categorized_facilities.csv", "r")
+vondelpark = open("../hotels-with-categorized-facilities/vondelpark(parsed)(1)_facilities_categorized_facilities.csv", "r")
+westminster = open("../hotels-with-categorized-facilities/westminster(parsed1)_facilities_categorized_facilities.csv", "r")
+wroclaw = open("../hotels-with-categorized-facilities/wrocław(parsed1)_facilities_categorized_facilities.csv", "r")
+dubai = open("../hotels-with-categorized-facilities/Radisson_Blu_Dubai_facilities_categorized_facilities.csv", "r")
+edinburgh = open("../hotels-with-categorized-facilities/Radisson_Blu_ Edinburgh_facilities_categorized_facilities.csv", "r")
+edwardian = open("../hotels-with-categorized-facilities/Radisson_Blu_Edwardian_facilities_categorized_facilities.csv", "r")
+edwardian_london = open("../hotels-with-categorized-facilities"
+                        "/Radisson_Blu_Edwardian_London_facilities_categorized_facilities.csv", "r")
+glasgow = open("../hotels-with-categorized-facilities/Radisson_Blu_Glasgow_facilities_categorized_facilities.csv", "r")
+liverpool = open("../hotels-with-categorized-facilities/Radisson_Blu_Liverpool_facilities_categorized_facilities.csv", "r")
+manchester = open("../hotels-with-categorized-facilities/Radisson_Blu_Manchester_facilities_categorized_facilities.csv", "r")
+sydney = open("../hotels-with-categorized-facilities/Radisson_Blu_Plaza Hotel "
+              "Sydney_facilities_categorized_facilities.csv", "r")
 
 country_hall_csv = csv.reader(country_hall)
 leeds_csv = csv.reader(leeds)
@@ -177,7 +181,6 @@ def add_column_to_csv(predicted, csv1, name_of_csv):
     list8 = []
     list9 = []
     list10 = []
-    list11 = []
     corr = 0
     for line, pred in zip(csv1, predicted):
         # print(pred)
@@ -191,15 +194,17 @@ def add_column_to_csv(predicted, csv1, name_of_csv):
         list7.append(line[7])
         list8.append(line[8])
         list9.append(line[9])
-        list10.append(line[10])
         if pred == 0:
             i = 0
-            # list11.append(0)
-        else:
+        elif pred == 1:
             i = 1
-            # list11.append(1)
-        list11.append(i)
-        if str(i) == line[9]:
+        else:
+            if line[8] == '1':
+                i = 1
+            else:
+                i = 0
+        list10.append(i)
+        if str(i) == line[8]:
             corr = corr + 1
     print(corr)
     print(len(predicted))
@@ -213,63 +218,77 @@ def add_column_to_csv(predicted, csv1, name_of_csv):
         'Review': list5,
         'Grade': list6,
         'Title': list7,
-        'Negative': list8,
-        'Positive': list9,
-        'Facilities': list10,
-        'Predicted': list11
+        'Positive': list8,
+        'Facilities': list9,
+        'Predicted': list10
     }
     df = pd.DataFrame(name_dict)
     df.to_csv(name_of_csv)
 
 
 add_column_to_csv(predicted_country_hall,
-                  csv.reader(open("../hotels-parsed-added-facilities/country_hall(parsed)(1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/country_hall(parsed)("
+                                  "1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_country_hall.csv')
 add_column_to_csv(predicted_leeds,
-                  csv.reader(open("../hotels-parsed-added-facilities/leeds(parsed)(1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/leeds(parsed)("
+                                  "1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_leeds.csv')
 add_column_to_csv(predicted_park_royal,
-                  csv.reader(open("../hotels-parsed-added-facilities/park_royal(parsed1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/park_royal("
+                                  "parsed1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_park_royal.csv')
 add_column_to_csv(predicted_riverbank,
-                  csv.reader(open("../hotels-parsed-added-facilities/riverbank(parsed1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/riverbank("
+                                  "parsed1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_riverbank.csv')
 add_column_to_csv(predicted_victoria_london,
-                  csv.reader(open("../hotels-parsed-added-facilities/victoria_london(parsed)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/victoria_london("
+                                  "parsed)_facilities_categorized_facilities.csv", "r")),
                   'predicted_victoria_london.csv')
 add_column_to_csv(predicted_victoria,
-                  csv.reader(open("../hotels-parsed-added-facilities/victoria(parsed)(1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/victoria(parsed)("
+                                  "1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_victoria.csv')
 add_column_to_csv(predicted_vondelpark,
-                  csv.reader(open("../hotels-parsed-added-facilities/vondelpark(parsed)(1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/vondelpark(parsed)("
+                                  "1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_vondelpark.csv')
 add_column_to_csv(predicted_westminster,
-                  csv.reader(open("../hotels-parsed-added-facilities/westminster(parsed1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/westminster("
+                                  "parsed1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_westminster.csv')
 add_column_to_csv(predicted_wroclaw,
-                  csv.reader(open("../hotels-parsed-added-facilities/wrocław(parsed1)_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/wrocław("
+                                  "parsed1)_facilities_categorized_facilities.csv", "r")),
                   'predicted_wroclaw.csv')
 add_column_to_csv(predicted_dubai,
-                  csv.reader(open("../hotels-parsed-added-facilities/Radisson_Blu_Dubai_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities"
+                                  "/Radisson_Blu_Dubai_facilities_categorized_facilities.csv", "r")),
                   'predicted_dubai.csv')
 add_column_to_csv(predicted_edinburg,
-                  csv.reader(open("../hotels-parsed-added-facilities/Radisson_Blu_ Edinburgh_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities/Radisson_Blu_ "
+                                  "Edinburgh_facilities_categorized_facilities.csv", "r")),
                   'predicted_edinburg.csv')
 add_column_to_csv(predicted_edwardian,
-                  csv.reader(open("../hotels-parsed-added-facilities/Radisson_Blu_Edwardian_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities"
+                                  "/Radisson_Blu_Edwardian_facilities_categorized_facilities.csv", "r")),
                   'predicted_edwardian.csv')
 add_column_to_csv(predicted_edwardian_london, csv.reader(
-    open("../hotels-parsed-added-facilities/Radisson_Blu_Edwardian_London_facilities.csv", "r")),
+    open("../hotels-with-categorized-facilities/Radisson_Blu_Edwardian_London_facilities_categorized_facilities.csv", "r")),
                   'predicted_edwardian_london.csv')
 add_column_to_csv(predicted_glasgow,
-                  csv.reader(open("../hotels-parsed-added-facilities/Radisson_Blu_Glasgow_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities"
+                                  "/Radisson_Blu_Glasgow_facilities_categorized_facilities.csv", "r")),
                   'predicted_glasgow.csv')
 add_column_to_csv(predicted_liverpool,
-                  csv.reader(open("../hotels-parsed-added-facilities/Radisson_Blu_Liverpool_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities"
+                                  "/Radisson_Blu_Liverpool_facilities_categorized_facilities.csv", "r")),
                   'predicted_liverpool.csv')
 add_column_to_csv(predicted_manchester,
-                  csv.reader(open("../hotels-parsed-added-facilities/Radisson_Blu_Manchester_facilities.csv", "r")),
+                  csv.reader(open("../hotels-with-categorized-facilities"
+                                  "/Radisson_Blu_Manchester_facilities_categorized_facilities.csv", "r")),
                   'predicted_manchester.csv')
 add_column_to_csv(predicted_sydney, csv.reader(
-    open("../hotels-parsed-added-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities.csv", "r")),
+    open("../hotels-with-categorized-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities_categorized_facilities.csv", "r")),
                   'predicted_sydney.csv')
