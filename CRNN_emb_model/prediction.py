@@ -62,7 +62,7 @@ def get_values_from_csv(csv):
             sentiment.append(1)
         else:
             sentiment.append(0)
-    return review, sentiment
+    return review[1:], sentiment[1:]
 
 
 review_country_hall = get_values_from_csv(country_hall_csv)[0]
@@ -210,20 +210,20 @@ def add_column_to_csv(predicted, csv1, name_of_csv):
     print(len(predicted))
     print(corr / len(predicted))
     name_dict = {
-        'Guest_country': list0,
-        'Room_info': list1,
-        'Nights_stayed': list2,
-        'Date of stay': list3,
-        'Travel_type': list4,
-        'Review': list5,
-        'Grade': list6,
-        'Title': list7,
-        'Positive': list8,
-        'Facilities': list9,
-        'Predicted': list10
+        'Guest_country': list0[1:],
+        'Room_info': list1[1:],
+        'Nights_stayed': list2[1:],
+        'Date of stay': list3[1:],
+        'Travel_type': list4[1:],
+        'Review': list5[1:],
+        'Grade': list6[1:],
+        'Title': list7[1:],
+        'Positive': list8[1:],
+        'Facilities': list9[1:],
+        'Predicted': list10[1:]
     }
     df = pd.DataFrame(name_dict)
-    df.to_csv(name_of_csv)
+    df.to_csv(name_of_csv, index=False)
 
 
 add_column_to_csv(predicted_country_hall,
