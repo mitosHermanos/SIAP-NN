@@ -439,5 +439,5 @@ def add_column_to_csv_cat(rf, nb, svm, csv1, name_of_csv):
     df.to_csv(name_of_csv, index=False)
 
 
-add_column_to_csv_cat(ahpc_rf, ahpc_nb, ahpc_svm, open("../all_hotels_predict_categorized.csv", "r"), 'all_hotels_categorized(nn_ml).svc')
-add_column_to_csv_row(ahpr_rf, ahpr_nb, ahpr_svm, open("../all_hotels_predict_row.csv", "r"), 'all_hotels_row(nn_ml).svc')
+add_column_to_csv_cat(ahpc_rf, ahpc_nb, ahpc_svm, csv.reader(open("../all_hotels_predict_categorized.csv", "r")), 'all_hotels_categorized(nn_ml).csv')
+add_column_to_csv_row(ahpr_rf, ahpr_nb, ahpr_svm, csv.reader(open("../all_hotels_predict_row.csv", "r")), 'all_hotels_row(nn_ml).csv')
