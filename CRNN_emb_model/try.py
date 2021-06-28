@@ -32,6 +32,9 @@ for d in reader:
     if d[1] == 'negative':
         neg.append(d[10])
 
+print(len(poz))
+print(len(neg))
+print(len(neu))
 nltk.download('wordnet')
 imdb = keras.datasets.imdb
 

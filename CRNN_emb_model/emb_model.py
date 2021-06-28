@@ -141,15 +141,15 @@ num_of_negs = 0
 length = len(df)
 print(length)
 i = 0
-while i < length:
-    try:
-        if df['airline_sentiment'][i] == 'negative':
-            if num_of_negs > 3000:
-                df.drop(index=df[df['tweet_id'] == df['tweet_id'][i]].index, inplace=True)
-            num_of_negs = num_of_negs + 1
-        i = i + 1
-    except:
-        i = i + 1
+# while i < length:
+#     try:
+#         if df['airline_sentiment'][i] == 'negative':
+#             if num_of_negs > 3000:
+#                 df.drop(index=df[df['tweet_id'] == df['tweet_id'][i]].index, inplace=True)
+#             num_of_negs = num_of_negs + 1
+#         i = i + 1
+#     except:
+#         i = i + 1
 print(len(df))
 df = df[['text', 'airline_sentiment']]
 df.text = df.text.apply(remove_stopwords).apply(remove_mentions)
@@ -178,27 +178,27 @@ df.text = df.text.apply(remove_stopwords).apply(remove_mentions)
 
 X_train, X_test, y_train, y_test = train_test_split(df.text, df.airline_sentiment, test_size=0.1, random_state=37)
 # EDA **********************************************************
-print(len(X_train), len(y_train))
-num_aug = 4
-alpha = 0.1
-length = len(X_train)
-i = 0
-j = 0
-for x, y in zip(X_train, y_train):
-    i = i + 1
-    try:
-        line = eda(x, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha, num_aug=num_aug)
-        while j < len(line):
-            # dataframe = pd.DataFrame([line[j], df['airline_sentiment'][i]], columns=list('test airline_sentiment'))
-            series1 = pd.Series(line[j], index=[length + i])
-            series2 = pd.Series(y, index=[length + i])
-            X_train = X_train.append(series1)
-            y_train = y_train.append(series2)
-            j = j+1
-        j = 0
-    except:
-        print('err')
-        continue
+# print(len(X_train), len(y_train))
+# num_aug = 4
+# alpha = 0.1
+# length = len(X_train)
+# i = 0
+# j = 0
+# for x, y in zip(X_train, y_train):
+#     i = i + 1
+#     try:
+#         line = eda(x, alpha_sr=alpha, alpha_ri=alpha, alpha_rs=alpha, p_rd=alpha, num_aug=num_aug)
+#         while j < len(line):
+#             # dataframe = pd.DataFrame([line[j], df['airline_sentiment'][i]], columns=list('test airline_sentiment'))
+#             series1 = pd.Series(line[j], index=[length + i])
+#             series2 = pd.Series(y, index=[length + i])
+#             X_train = X_train.append(series1)
+#             y_train = y_train.append(series2)
+#             j = j+1
+#         j = 0
+#     except:
+#         print('err')
+#         continue
 print(len(X_train), len(y_train))
 
 tk = Tokenizer(num_words=NB_WORDS,

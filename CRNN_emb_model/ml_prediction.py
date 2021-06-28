@@ -315,12 +315,12 @@ def add_column_to_csv_row(rf, nb, svm, csv1, name_of_csv):
         list14.append(i)
     print('asdasdasd',list0[1])
     name_dict = {
-        'Hotel_name': list0,
-        'Hotel_chain': list1,
-        'Guest_country': list2,
-        'Room_info': list3,
-        'Nights_stayed': list4,
-        'Date of stay': list5,
+        'Hotel_name': list0[1:],
+        'Hotel_chain': list1[1:],
+        'Guest_country': list2[1:],
+        'Room_info': list3[1:],
+        'Nights_stayed': list4[1:],
+        'Date of stay': list5[1:],
         'Travel_type': list6,
         'Review': list7,
         'Grade': list8,

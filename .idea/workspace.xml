@@ -1,17 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="857fa0db-32cd-46a5-a739-7eecdf8cd4b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CRNN_emb_model/prediction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRNN_emb_model/cnn_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRNN_emb_model/lstm_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRNN_emb_model/transformer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SIAP-NN.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SIAP-NN.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/neural_network.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/neural_network.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/.~lock.all_hotels_row(nn_ml).csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_country_hall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_country_hall.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_dubai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_dubai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_edinburg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_edinburg.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_edwardian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_edwardian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_edwardian_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_edwardian_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_glasgow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_glasgow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_leeds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_leeds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_liverpool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_liverpool.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_manchester.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_manchester.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_park_royal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_park_royal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_riverbank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_riverbank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_sydney.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_sydney.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_victoria.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_victoria.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_victoria_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_victoria_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_vondelpark.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_vondelpark.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_westminster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_westminster.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_wroclaw.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/SVM/predicted_svm_wroclaw.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/Tweets.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/Tweets.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/all_hotels_categorized(nn_ml).csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/all_hotels_predict_categorized.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/all_hotels_predict_categorized.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/all_hotels_predict_row.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/all_hotels_predict_row.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/all_hotels_row(nn_ml).csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CRNN_emb_model/emb_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/emb_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRNN_emb_model/emb_model/saved_model.pb" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/emb_model/saved_model.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRNN_emb_model/emb_model/variables/variables.data-00000-of-00001" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/emb_model/variables/variables.data-00000-of-00001" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CRNN_emb_model/emb_model/variables/variables.index" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/emb_model/variables/variables.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/ml_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/ml_prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_country_hall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_country_hall.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_dubai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_dubai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_edinburg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_edinburg.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_edwardian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_edwardian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_edwardian_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_edwardian_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_glasgow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_glasgow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_leeds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_leeds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_liverpool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_liverpool.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_manchester.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_manchester.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_park_royal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_park_royal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_riverbank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_riverbank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_sydney.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_sydney.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_victoria.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_victoria.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_victoria_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_victoria_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_vondelpark.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_vondelpark.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_westminster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_westminster.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_wroclaw.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/naive_bayes/predicted_nb_wroclaw.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/oneCSVcat.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/oneCSVcat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/oneCSVrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/oneCSVrow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_country_hall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_country_hall.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_dubai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_dubai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_edinburg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_edinburg.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_edwardian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_edwardian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_edwardian_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_edwardian_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_glasgow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_glasgow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_leeds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_leeds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_liverpool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_liverpool.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_manchester.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_manchester.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_park_royal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_park_royal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_riverbank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_riverbank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_sydney.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_sydney.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_victoria.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_victoria.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_victoria_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_victoria_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_vondelpark.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_vondelpark.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_westminster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_westminster.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_wroclaw.csv" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/random_forest/predicted_rf_wroclaw.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/svm.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/svm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/test2.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/test2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CRNN_emb_model/try.py" beforeDir="false" afterPath="$PROJECT_DIR$/CRNN_emb_model/try.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Data_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA/Hotel_chain_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/Hotel_chain_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA/Hotel_chain_new.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/Hotel_chain_new.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EDA/categorized-facilities.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/EDA/categorized-facilities.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Popularity_of_facilities.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Popularity_of_facilities.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_hotels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_hotels.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_hotels_predict_categorized.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_hotels_predict_categorized.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_hotels_predict_row.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_hotels_predict_row.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_hotels_row.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_hotels_row.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/.idea/booking-scraper.iml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/.idea/booking-scraper.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_ Edinburgh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_ Edinburgh.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Dubai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Dubai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Edwardian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Edwardian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Edwardian_London.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Edwardian_London.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Glasgow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Glasgow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Liverpool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Liverpool.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Manchester.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Manchester.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Plaza Hotel Sydney.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson Blu/Radisson_Blu_Plaza Hotel Sydney.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_ Edinburgh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_ Edinburgh.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Dubai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Dubai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Edwardian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Edwardian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Edwardian_London.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Edwardian_London.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Glasgow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Glasgow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Liverpool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Liverpool.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Manchester.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Manchester.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Plaza Hotel Sydney.csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/Radisson_Blu_Plaza Hotel Sydney.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/country_hall(parsed).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/country_hall(parsed).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/leeds(parsed).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/leeds(parsed).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/park_royal(parsed1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/park_royal(parsed1).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/riverbank(parsed1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/riverbank(parsed1).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/victoria(parsed).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/victoria(parsed).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/victoria_london(parsed).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/victoria_london(parsed).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/vondelpark(parsed).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/vondelpark(parsed).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/westminster(parsed1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/westminster(parsed1).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/csv/wrocław(parsed1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/csv/wrocław(parsed1).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/custom.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/custom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/read.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/read.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/booking-scraper/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/booking-scraper/tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_ Edinburgh_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_ Edinburgh_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Dubai_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Dubai_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Edwardian_London_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Edwardian_London_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Edwardian_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Edwardian_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Glasgow_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Glasgow_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Liverpool_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Liverpool_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Manchester_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Manchester_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/country_hall(parsed)(1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/country_hall(parsed)(1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/leeds(parsed)(1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/leeds(parsed)(1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/park_royal(parsed1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/park_royal(parsed1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/riverbank(parsed1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/riverbank(parsed1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/victoria(parsed)(1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/victoria(parsed)(1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/victoria_london(parsed)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/victoria_london(parsed)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/vondelpark(parsed)(1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/vondelpark(parsed)(1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/westminster(parsed1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/westminster(parsed1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-parsed-added-facilities/wrocław(parsed1)_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-parsed-added-facilities/wrocław(parsed1)_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_ Edinburgh_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_ Edinburgh_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Dubai_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Dubai_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Edwardian_London_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Edwardian_London_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Edwardian_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Edwardian_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Glasgow_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Glasgow_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Liverpool_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Liverpool_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Manchester_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Manchester_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/Radisson_Blu_Plaza Hotel Sydney_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/country_hall(parsed)(1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/country_hall(parsed)(1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/leeds(parsed)(1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/leeds(parsed)(1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/park_royal(parsed1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/park_royal(parsed1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/riverbank(parsed1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/riverbank(parsed1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/victoria(parsed)(1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/victoria(parsed)(1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/victoria_london(parsed)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/victoria_london(parsed)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/vondelpark(parsed)(1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/vondelpark(parsed)(1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/westminster(parsed1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/westminster(parsed1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-categorized-facilities/wrocław(parsed1)_facilities_categorized_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-categorized-facilities/wrocław(parsed1)_facilities_categorized_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_ Edinburgh_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_ Edinburgh_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Dubai_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Dubai_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Edwardian_London_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Edwardian_London_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Edwardian_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Edwardian_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Glasgow_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Glasgow_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Liverpool_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Liverpool_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Manchester_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Manchester_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Plaza Hotel Sydney_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/Radisson_Blu_Plaza Hotel Sydney_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/country_hall(parsed)(1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/country_hall(parsed)(1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/leeds(parsed)(1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/leeds(parsed)(1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/park_royal(parsed1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/park_royal(parsed1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/riverbank(parsed1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/riverbank(parsed1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/victoria(parsed)(1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/victoria(parsed)(1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/victoria_london(parsed)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/victoria_london(parsed)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/vondelpark(parsed)(1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/vondelpark(parsed)(1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/westminster(parsed1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/westminster(parsed1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotels-with-row-facilities/wrocław(parsed1)_row_facilities.csv" beforeDir="false" afterPath="$PROJECT_DIR$/hotels-with-row-facilities/wrocław(parsed1)_row_facilities.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_country_hall.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_country_hall.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_dubai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_dubai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_edinburg.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_edinburg.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_edwardian.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_edwardian.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_edwardian_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_edwardian_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_glasgow.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_glasgow.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_leeds.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_leeds.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_liverpool.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_liverpool.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_manchester.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_manchester.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_park_royal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_park_royal.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_riverbank.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_riverbank.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_sydney.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_sydney.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_victoria.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_victoria.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_victoria_london.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_victoria_london.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_vondelpark.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_vondelpark.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_westminster.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_westminster.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_wroclaw.csv" beforeDir="false" afterPath="$PROJECT_DIR$/predicted-facilities2-crnn/predicted_wroclaw.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/row-facilities.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/row-facilities.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,8 +256,75 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.transformer">
+    <configuration name="cnn_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SIAP-NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CRNN_emb_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CRNN_emb_model/cnn_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="emb_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SIAP-NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CRNN_emb_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CRNN_emb_model/emb_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="lstm_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SIAP-NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CRNN_emb_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CRNN_emb_model/lstm_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="prediction" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SIAP-NN" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -50,8 +347,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="transformer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SIAP-NN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CRNN_emb_model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CRNN_emb_model/transformer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.transformer" />
+        <item itemvalue="Python.cnn_model" />
+        <item itemvalue="Python.lstm_model" />
+        <item itemvalue="Python.emb_model" />
         <item itemvalue="Python.prediction" />
       </list>
     </recent_temporary>
@@ -65,31 +388,58 @@
       <option name="presentableId" value="Default" />
       <updated>1619779734753</updated>
       <workItem from="1619779735812" duration="120000" />
+      <workItem from="1623668603201" duration="96000" />
+      <workItem from="1624639192226" duration="4221000" />
+      <workItem from="1624897718675" duration="4383000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1255" height="186" key="GridCell.Tab.0.bottom" timestamp="1619779855411">
+    <state x="503" y="147" key="FileChooserDialogImpl" timestamp="1624640073028">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state width="1255" height="186" key="GridCell.Tab.0.bottom/65.24.1301.744@65.24.1301.744" timestamp="1619779855411" />
-    <state width="1255" height="186" key="GridCell.Tab.0.center" timestamp="1619779855410">
+    <state x="503" y="147" key="FileChooserDialogImpl/65.24.1301.744@65.24.1301.744" timestamp="1624640073028" />
+    <state width="1255" height="175" key="GridCell.Tab.0.bottom" timestamp="1624903638927">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state width="1255" height="186" key="GridCell.Tab.0.center/65.24.1301.744@65.24.1301.744" timestamp="1619779855410" />
-    <state width="1255" height="186" key="GridCell.Tab.0.left" timestamp="1619779855410">
+    <state width="1255" height="175" key="GridCell.Tab.0.bottom/65.24.1301.744@65.24.1301.744" timestamp="1624903638927" />
+    <state width="1255" height="175" key="GridCell.Tab.0.center" timestamp="1624903638926">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state width="1255" height="186" key="GridCell.Tab.0.left/65.24.1301.744@65.24.1301.744" timestamp="1619779855410" />
-    <state width="1255" height="186" key="GridCell.Tab.0.right" timestamp="1619779855411">
+    <state width="1255" height="175" key="GridCell.Tab.0.center/65.24.1301.744@65.24.1301.744" timestamp="1624903638926" />
+    <state width="1255" height="175" key="GridCell.Tab.0.left" timestamp="1624903638926">
       <screen x="65" y="24" width="1301" height="744" />
     </state>
-    <state width="1255" height="186" key="GridCell.Tab.0.right/65.24.1301.744@65.24.1301.744" timestamp="1619779855411" />
+    <state width="1255" height="175" key="GridCell.Tab.0.left/65.24.1301.744@65.24.1301.744" timestamp="1624903638926" />
+    <state width="1255" height="175" key="GridCell.Tab.0.right" timestamp="1624903638927">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state width="1255" height="175" key="GridCell.Tab.0.right/65.24.1301.744@65.24.1301.744" timestamp="1624903638927" />
+    <state x="209" y="24" key="SettingsEditor" timestamp="1624640114201">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="209" y="24" key="SettingsEditor/65.24.1301.744@65.24.1301.744" timestamp="1624640114201" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SIAP_NN$prediction.coverage" NAME="prediction Coverage Results" MODIFIED="1619779796872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CRNN_emb_model" />
+    <SUITE FILE_PATH="coverage/SIAP_NN$emb_model.coverage" NAME="emb_model Coverage Results" MODIFIED="1624898987639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CRNN_emb_model" />
+    <SUITE FILE_PATH="coverage/SIAP_NN$cnn_model.coverage" NAME="cnn_model Coverage Results" MODIFIED="1624903485449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CRNN_emb_model" />
+    <SUITE FILE_PATH="coverage/SIAP_NN$transformer.coverage" NAME="transformer Coverage Results" MODIFIED="1624903638895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CRNN_emb_model" />
+    <SUITE FILE_PATH="coverage/SIAP_NN$lstm_model.coverage" NAME="lstm_model Coverage Results" MODIFIED="1624901176549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CRNN_emb_model" />
   </component>
 </project>
